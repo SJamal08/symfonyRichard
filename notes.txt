@@ -1,0 +1,83 @@
+Debut
+Au minimun php 7.1.9
+
+php -v pour avoir la version 
+composer -v pour verifier que composer est installé
+
+Une fois que c'est bon on peut commencer
+
+Symfony framework hype trop doux 
+
+Très simple a utilisé 
+
+Privilégier la documentation propre à Symfony 
+
+pas besoin d'aller dans wamp/www ou xamp/htdocs
+
+les projets symfony on leur propre serveur interne
+
+Pour créer un projet 
+composer create-project symfony/website-skeleton nomProjet
+composer create-project symfony/website-skeleton nomProjet 4.0.* //Derniere version de symfony 4
+
+Installer les librairies 
+
+composer require server --dev 
+le --dev signifie que le package est utilisé uniquement en mode developpement 
+
+php bin/console server:run  pour lancer le projet sur un certain port de notre localhost
+
+
+Les controllers
+
+Les controler les traitements 
+twig pour les templates 
+Doctrine pour la bdd
+
+Le controller ecoute une adresse et repond en fonction de la route sur laquelle l'utilisateur se trouve 
+Notre bro la cmd 
+
+
+php bin/console make:controller  nomController //Pour créer un controller 
+
+
+On peut maintenant aller sur notre controller pour voir ce que l'on a par défaut 
+@Route permet en faite dedefinir la route qui correspond au traitement qui sera fait par le controller
+
+$this->render('repertoireTemplate)
+Ne jamais oublié d'ajouter la route qui sera considéré par le controller 
+
+Le nom des routes est tres important 
+
+
+A partir de là on peut créer nos pages facilement 
+
+PARLONS UN PEU DE TWIG  (langage de rendue qui apporte de la simplicité)
+
+Les pages sont donc nommées page.html.twig
+
+On peut don cutiliser twig dans nos projets php en dehors de symfony 
+
+
+
+Pour afficher une variable 
+{{VARIABLE}}
+
+Les commandes dans twig 
+{% if age > 18 %}
+{% else %}
+{% endif %}
+
+
+Donc ces variables viennent du controller 
+Ne jamais oublié d'envoyer ler sinon on puet pas les utiliser dans le template 
+
+
+Bootswatch permet d'avoir les composants bootstrap un peu plus stylisés 
+
+
+Parlon des templates eux même 
+
+Pour avoir quelque chose qui s'affiche sur toutes les pages on fait une page
+de base qui continet le layut de notre site web 
+
